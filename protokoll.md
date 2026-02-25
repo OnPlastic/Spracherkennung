@@ -119,4 +119,22 @@ git init
 
 ```
 git add . 
-git commit -m "Initial project structure for speech recognition system
+git commit -m "Initial project structure for speech recognition system"
+```
+14. **GitHub**-Repo anbinden
+
+*https://gihub.com/OnPlastic*
+Erstellen eines neuen Repos, Name: **Spracherkennung**
+- kein README erzeugen
+- kein .gitignore erzeugen
+- kein License erzeugen
+
+>Remote Repo SSH
+
+```
+git remote add origin git@github.com:OnPlastic/spracherkennung.git
+
+git branch -M main
+git push -u origin main
+```
+
