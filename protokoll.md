@@ -128,13 +128,27 @@ Erstellen eines neuen Repos, Name: **Spracherkennung**
 - kein README erzeugen
 - kein .gitignore erzeugen
 - kein License erzeugen
+- **! SONST KLAPPT DER PUSH NICHT !**
 
->Remote Repo SSH
+>Remote Repo SSH *~/.ssh/id_ed25519*  
+"die SSH Verbindung wurde schon erstellt, siehe Bitwarden"
 
 ```
+bsh  
 git remote add origin git@github.com:OnPlastic/spracherkennung.git
 
 git branch -M main
 git push -u origin main
 ```
+```
+bsh -Kontrolle
+git log --oneline --decorate -5
+git remote -v
+```
+Damit ist die Einrichtung soweit fertig.
 
+## 2. Umsetzung - Coding
+
+![Ablaufdiagramm](flowchart.png)
+
+1
