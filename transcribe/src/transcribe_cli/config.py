@@ -21,13 +21,13 @@ def load_config(project_root: Path) -> AppConfig:
         raw = tomllib.load(f)
 
     t = raw.get("transcription", {})
-    l = raw.get("logging", {})
-    log_dir = project_root / l.get("log_dir", "logs")
-    log_level = str(l.get("level", "INFO")) 
+    logging_config = raw.get("logging", {})
+    log_dir = project_root / logging_config.get("log_dir", "logs")
+    log_level = str(logging_config.get("level", "INFO"))
     output_dir = project_root / t.get("output_dir", "output/transcripts")
 
     return AppConfig(
         output_dir=output_dir,
         log_dir=log_dir,
-        log_level=log_level       
+        log_level=log_level
     )
