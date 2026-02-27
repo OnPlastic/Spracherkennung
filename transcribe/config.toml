@@ -1,0 +1,18 @@
+[transcription]
+# beste Qualität
+model_name = "large-v3"
+language = "de"
+
+# du nutzt bereits output/transcripts
+output_dir = "output/transcripts"
+
+[mail]
+smtp_host = "smtp.gmail.com"
+smtp_port = 465
+use_ssl = true
+from_name = "Spracherkennung CLI"
+subject_prefix = "[Transkript]"
+
+[logging]
+log_dir = "logs"
+level = "INFO"
