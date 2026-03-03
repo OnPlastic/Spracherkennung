@@ -26,7 +26,7 @@ def record_until_enter(
     settings: RecordingSettings = RecordingSettings(),
 ) -> Path:
     """
-    Start microphone recording and stopo on ENTER.
+    Start microphone recording and stop on ENTER.
     Saves WAV into output_dir and returns the path.
     """
     output_dir.mkdir(parents=True, exist_ok=True)
