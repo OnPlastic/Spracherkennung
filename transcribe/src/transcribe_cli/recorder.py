@@ -41,7 +41,7 @@ def record_until_enter(
         out_path,
     )
 
-    print("\nAufnahme läuft... Drücke ENTER zum Stoppen.\n")
+    print("\nAufnahme läuft... Drücke <ENTER> zum Stoppen.\n")
 
     frames: list[np.ndarray] = []
     t0 = perf_counter()
