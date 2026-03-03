@@ -73,6 +73,9 @@ def main() -> int:
     to_addr: str | None = None
     if mode == "M":
         to_addr = input("Bitte Mailadresse eingeben: ").strip()
+        if not to_addr:
+            print("Keine Mailadresse eingegeben.")
+            return 3
         print("Mailadresse:", to_addr)
 
     # --- Recorder nach der 3. Abfrage ---
@@ -80,7 +83,7 @@ def main() -> int:
         recordings_dir = project_root / "input" / "recordings"
         audio_path = record_until_enter(output_dir=recordings_dir)
         log.info("Recorded audio saved: %s", audio_path)
-    
+   
     # --- Type-Safety: audio_path muss jetzt gesetzt sein ---
     if audio_path is None:
         raise RuntimeError("Audio path should not be None at this point.")
@@ -111,6 +114,8 @@ def main() -> int:
         )
 
         subject = f"[Transkript] {out_txt.stem}"
+
+        assert to_addr is not None  # for type checker
 
         send_mail_text(
             smtp=smtp,
