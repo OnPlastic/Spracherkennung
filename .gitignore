@@ -1,10 +1,15 @@
+# Python / venv
 .venv/
 __pycache__/
 *.pyc
-input/recordings/
-output/
-logs/
-# --- Local-only audio / artifacts ---
-transcribe/input/audio
+
+# Runtime (nur im transcribe-Projekt)
+transcribe/output/
+transcribe/logs/
+
+# Local-only audio / recordings
+transcribe/input/audio/
 transcribe/input/recordings/
-_local_audio_backup
+
+# Local backups
+_local_audio_backup/
