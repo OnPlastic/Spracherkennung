@@ -1,4 +1,4 @@
-## Installation
+## 1. Installation
 
 Ich habe bereits ein eingerichtetes WSL. Ich habe geprüft ob Sound wiedergegeben werden kann und ob Sound aufgenommen werden kann.
 

@@ -80,6 +80,10 @@ def main() -> int:
         recordings_dir = project_root / "input" / "recordings"
         audio_path = record_until_enter(output_dir=recordings_dir)
         log.info("Recorded audio saved: %s", audio_path)
+    
+    # --- Type-Safety: audio_path muss jetzt gesetzt sein ---
+    if audio_path is None:
+        raise RuntimeError("Audio path should not be None at this point.")
 
     # --- Transkription ---
     log.info("Mode selected: %s", mode)
