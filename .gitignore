@@ -4,7 +4,3 @@ __pycache__/
 input/recordings/
 output/
 logs/
-# --- Local-only audio / artifacts ---
-transcribe/input/audio
-transcribe/input/recordings/
-_local_audio_backup
